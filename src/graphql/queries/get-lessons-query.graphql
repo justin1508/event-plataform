@@ -1,0 +1,11 @@
+#'SELECT' que retorna as lessons que já estão publicadas ordenando pelo availableAt
+
+query GetLessons {
+  lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
+    id
+    lessonType
+    availableAt
+    slug
+    title
+  }
+}
